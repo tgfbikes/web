@@ -1,0 +1,44 @@
+
+/*Set up for nav menu background and spacing*/
+.bmenu{
+	background-color:rgba(115,110,110,0.6);
+	border-radius:15px;
+    padding: 15px 0 0 10px;
+    margin: 0 0 10px 0;
+    position:relative;
+
+/*Displays list as block with specific font size*/
+}
+.bmenu li{
+    font-size: 50px;
+    display: block;
+}
+
+/*Displays each list item anchor without hover*/
+.bmenu li a{
+	color: transparent;
+	display: block;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 5px #33EAD4;
+	letter-spacing: 1px;
+	/*-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;*/
+	
+/*Here's where the magic happens; any text within the 
+list anchor tags will transition to specified state which is
+programmed below with the :hover declaration. The time duration 
+has to be given or else it will default to zero and not do anything*/
+	transition: all 0.3s ease-in-out;
+}
+/*Makes all the text within every list anchor tag within the 
+menu change color*/
+.bmenu:hover li a{
+	text-shadow: 0px 0px 5px #0d1a3a;
+}
+/*While the single list anchor text is hovered over it will 
+change color and move 10px.*/
+.bmenu li a:hover{
+	color: #60F0A7;
+	text-shadow: 0px 0px 10px #000000;
+	padding-left: 10px;
+}
