@@ -1,0 +1,27 @@
+extend layout
+
+block title
+	title New Order
+
+block content
+	h1 New Orders
+	a(href='/orders') All Orders
+	form(method='post', action='/orders')
+		p
+			label Date
+			br
+			input(type='date', name='date')
+		p
+			label Customer Name
+			br
+			input(type='text', name='customer_name', placeholder='Customer Name')
+		p
+			label Order
+			br
+			textarea(name='order', placeholder='Order')
+		p
+			label Server Name
+			br
+			input(type='text', name='server_name', placeholder='Server Name')
+		p
+			input(type='submit' value='Place Order')

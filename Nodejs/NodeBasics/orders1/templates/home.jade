@@ -1,0 +1,26 @@
+extends layout
+
+block title
+	title My homepage
+
+block content
+	h1 Welcome
+	form(method='get', action='/query')
+		input(type='checkbox', name='foo', value='rules')
+		br
+		input(type='eamil', name='baz', placeholder='type your email')
+		br
+		textarea(name='bar')
+		br
+		input(type='submit')
+		br
+	form(method="post")
+		each statement, j in statements
+			div= statement
+			ul
+				each answer, i in answers
+					li
+						input(type='radio', name='s'+j, value=i)
+						= answers[i]
+			hr
+		input(type='submit', value='Send Survey')

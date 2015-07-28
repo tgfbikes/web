@@ -1,0 +1,16 @@
+extend layout
+
+block title
+	title Orders #{id}
+
+block content
+	h1 Your order ##{id} 
+	a(href='/orders') All Orders
+	p Date: #{order.date}
+	p Customer Name: #{order.customer_name}
+	p Order: #{order.order}
+	p Server Name: #{order.server_name}
+
+	a(href='/orders/' + id + '/edit') Edit Order
+	form(method='post', action='/orders/' + id + '?_method=DELETE', onsubmit='return confirm("Do you want to delete this order?")')
+		input(type='submit', value='Delete Order')

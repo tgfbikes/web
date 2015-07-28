@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+header, hgroup, av, footer, section, article, figure, figcaption, aside {display:block;}
+
+#header_nav{
+	height:52px;
+	max-width:1240px;
+	width:100%;
+	font-family:Trebuchet MS, Helvetica, Arial, sans-serif;
+	background:rgba(000,000,000,0.5);
+	color:#fff;
+	position:fixed;
+	margin-left:auto;
+	top:0px;
+}
+
+#header_nav h1 {
+	display:inline;
+	float:left;
+	padding-left:30px;
+	padding-top:5px;
+	margin:0px;
+}
+
+#contact {
+
+}
+
+#contact_content {
+
+}
+
+#content {
+	max-width:1240px;
+	height:2000px;
+	margin:auto;
+	padding-top:50px;
+	background-color:#74A9F2;
+}
+
+#footer {
+
+}
+
+#portfolio {
+
+}
+
+#portfolio_examples {
+
+}
+
+#profile {
+	width:100%;	
+}
+
+#profile h1, h3, p {
+	text-align: center;
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+} 
+
+#prifile_description {
+
+}
+
+#nav {
+	padding-top:10px;
+	padding-right:30px;
+	width:auto;
+	font-size:20pt;
+	float:right;
+}
+
+#nav ul {
+	text-align:center;
+	padding:0px;
+	margin:0px;
+}
+
+#nav ul li {
+	display:inline;
+	list-style-type:none;
+	padding-left:10px;
+}
+
+#nav ul li a {
+	text-decoration:none;
+	color:#DCB788;
+	transition: all 0.3s ease-in-out;
+}
+
+#nav ul li a:hover {
+	color:#FBB040;
+}
+
+#wrapper {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	max-width:1240px;
+
+}
+
+/*body {
+	height:2000px;
+	width:100%;
+	margin:0px;
+}*/
+
+
+
+
+
+
+
+
+

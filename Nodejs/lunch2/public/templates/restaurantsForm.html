@@ -1,0 +1,10 @@
+<h2>{{ formCtrl.restaurant._id ? 'Edit' : 'New' }} Form</h2>
+<form ng-submit='formCtrl.saveRestaurant()'>
+<input type='text' name='name' placeholder='Name' ng-model='formCtrl.restaurant.name'>
+<br>
+<input type='text' name='type' placeholder='Type' ng-model='formCtrl.restaurant.type'>
+<br>
+<input type='text' name='phone' placeholder='Phone' ng-model='formCtrl.restaurant.phone'>
+<br>
+<input type='submit' value='Create Restaurant'>
+</form>

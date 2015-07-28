@@ -1,0 +1,20 @@
+MVC = Model, View, Controller
+
+
+Seperate code into more manageable parts
+
+Controller
+===============
+Send and receive data
+
+View
+===============
+What's sent to the web browser
+
+Model
+==============
+Manipulates/stroes data
+	- changing
+	- CRUD data from the database
+		=> Create, Read, Update, Delete
+	- sending emails/texts

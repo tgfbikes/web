@@ -1,0 +1,9 @@
+<h2>Restaurants</h2>
+<form ng-submit="restaurantsCtrl.filterRestaurants()">
+    <input type='text' name='type' placeholder='Search by Type' ng-model='restaurantsCtrl.searchText'>
+    <input type="submit" value="Filter by Type">
+</form>
+<br>
+<div ng-repeat = "restaurant in restaurantsCtrl.restaurants">
+    <a ui-sref="restaurantDetail(restaurant)">{{ restaurant.name }}</a>
+ </div>

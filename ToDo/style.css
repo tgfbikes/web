@@ -1,0 +1,73 @@
+form p {
+	margin-bottom: 0px;
+	margin-left: 20px;
+}
+
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	width: 960px;
+	height: auto;
+	background-color: #7F6A5F;
+}
+
+#list {
+	width: 470px;
+	height: 500px;
+	background-color: #FFA172;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 25pt;
+	margin: 5px;
+	float: left;
+}
+
+#list-sub {
+	width: 450px;
+	height: 300px;
+	background-color: #7F5039;
+	margin: 10px 10px;
+	padding-top: 10px;
+	font-size: 20pt;
+	text-align: left;
+}
+
+#list-sub ul {
+	list-style-type: none;
+}
+
+#add-item {
+	width: 470px;
+	height: 500px;
+	background-color: #FFA172;
+	text-align: center;
+	font-family: Helvetica;	
+	font-size: 25pt;
+	margin: 5px;
+	float: left;
+}
+
+#add-item-sub {
+	width: 450px;
+	height: 300px;
+	text-align: left;
+	background-color: #7F5039;
+	margin: 10px 10px;
+
+}
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */

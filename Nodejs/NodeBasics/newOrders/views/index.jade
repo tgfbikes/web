@@ -1,0 +1,16 @@
+extend layout
+
+block content
+  h1 Current Orders
+  table
+    tr
+      th Order Number
+      th Order Name
+      th Order Time
+      th Customer Name
+      each order in orders
+        tr
+          td= order.number
+          td= order.name
+          td= order.time
+          td= order.custName

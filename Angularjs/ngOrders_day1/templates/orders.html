@@ -1,0 +1,16 @@
+<h2>All Orders</h2>
+
+<p>
+  <a ui-sref="newOrder">New Order</a>
+</p>
+<p>
+  <input type="text" ng-model="ordersVm.search">
+</p>
+
+<div class="list-group">
+    <a ng-repeat="order in ordersVm.orders | orderBy : 'pickup' | filter : ordersVm.search" ui-sref="viewOrder(order)" class="list-group-item">
+        {{ order.name }}
+      <span class="pull-right">{{ order.pickup | date : 'shortTime' }}</span>
+    </a>
+
+</div>

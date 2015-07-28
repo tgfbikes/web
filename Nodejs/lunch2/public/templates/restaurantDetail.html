@@ -1,0 +1,18 @@
+<h2>Restaurant Detail</h2>
+
+<div>
+    <p>
+        Type: {{ detailCtrl.restaurant.type }}
+    </p>
+    <p>
+        Name: {{ detailCtrl.restaurant.name }}
+    </p>
+</div>
+
+<p>
+    <a ui-sref="restaurantEdit(detailCtrl.restaurant)">Edit Restaurant</a>
+</p>
+
+<p>
+    <button ng-click="detailCtrl.deleteRestaurant()">Delete Restaurant</button>
+</p>

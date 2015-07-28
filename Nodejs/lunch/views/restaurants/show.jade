@@ -1,0 +1,12 @@
+extend ../layout
+
+block content
+  h2 Showing Restaurant
+
+  p Name: #{restaurant.name}
+  p Type: #{restaurant.type}
+  p Phone: #{restaurant.phone}
+  p
+    a(href='/restaurants/#{restaurant._id}/edit') Edit Restaurant
+    form(method='post' action='/restaurants/#{restaurant._id}?_method=delete')
+      input(type='submit' value='Delete Restaurant')

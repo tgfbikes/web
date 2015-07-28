@@ -1,0 +1,21 @@
+Body (req.body) POST, PUT, PATCH, DELETE
+================
+Any data the user sends but our get parameters
+
+Params (req.params) any request
+================
+Data that's defined in our routes
+
+ie.
+app.post('/:id') 
+	=> /xyz 
+	=> req.params.id would equal 'xyz'
+
+Query (req.query) any request, "GET Parameters"
+================
+Data that's provided in the url
+
+ie.
+app.post('/') 
+	=> /?knowledge=power 
+	=> req.query.knowledge would equal power

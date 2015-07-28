@@ -1,0 +1,27 @@
+extend layout
+
+block title
+	title Edit Order ##{id}
+
+block content
+	h1 Edit Orders ##{id}
+	a(href='/orders/' + id) Back to Orders
+	form(method='put', action='/orders/' + id + '?_method=PUT')
+		p
+			label Date
+			br
+			input(type='date', name='date', value=order.date)
+		p
+			label Customer Name
+			br
+			input(type='text', name='customer_name', value=order.customer_name)
+		p
+			label Order
+			br
+			textarea(name='order')= order.order
+		p
+			label Server Name
+			br
+			input(type='text', name='server_name', value=order.server_name)
+		p
+			input(type='submit' value='Place Order')
