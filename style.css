@@ -1,0 +1,13 @@
+@charset "UTF-8";
+html {
+	background-image:url(images/swirl_pattern.png);
+	background-repeat:repeat;
+	}
+
+#wrapper {
+	background-position:center;
+	background-color:#90C7E3;
+	min-width:960px;
+	width:80%;
+	margin:auto;
+	}

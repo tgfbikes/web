@@ -1,0 +1,58 @@
+@charset "UTF-8";
+body {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+h1 {
+	font-size:2em;
+	font-weight:normal;
+	text-transform:uppercase;
+	text-align:center;
+	background-color:Red;
+	color: #fff;
+	width:300px;
+	min-width:500px;
+	max-width:1000px;
+	min-height:500px;
+	border-radius:90px;
+	
+}
+p {
+	line-height:25px;
+	text-indent:3em;
+}
+
+#container {
+	width:960px;
+	margin-left:auto;
+	margin-right:20%;
+	
+}
+
+.position{
+	position:static;  /*Default; static to html text*/
+	position:relative; /*Relative to html text*/
+	position:fixed; /*Stays fixed off of the parent*/
+	}
+
+.clear{
+	clear:both; /* Overides float*/
+	}
+
+.float{
+	float:left; /* Allows text to float around class*/
+	
+	}
+	
+.overflow{
+	overflow:scroll; /*Overflow takes off whatever overflows out of the div*/
+}
+
+img {
+	border-style:solid;
+	border-width:5px 20px;
+	border-color:#D22326;
+	padding:10px;
+	margin: auto;
+	border-radius:50px;
+}
+

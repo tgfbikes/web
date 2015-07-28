@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+header, hgroup, av, footer, section, article, figure, figcaption, aside {display:block;}
+
+body {
+	background-image:url(images/swirl_pattern.png);
+	background-repeat:repeat;
+	height:auto;
+	}
+	
+.borders {
+	background-color:#595A5C;
+	color:#fff;
+	height:100px;
+	width:100%;
+	font-size:1em;
+	padding:5px 0px;
+	}
+	
+iframe {
+	padding-top:30px;
+	}
+	
+a:hover {
+	color:#000;
+	}
+	
+aside a img:hover {
+	box-shadow: 10px 10px 15px #888888;
+	}
+	
+aside {
+	float:left;
+	width:250px;
+	height:auto;
+	padding-left:30px;
+	margin-left:30px;
+	margin-bottom:10px;
+    }
+	
+aside h4 {
+	color:#000;
+	text-align:center;
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+	border-bottom:1px solid #000;
+	margin-top:30px;
+	margin-bottom:0px;
+	}
+		
+footer {
+	clear:left;
+	background-color:#595A5C;
+	color:#fff;
+	height:110px;
+	width:100%;
+	font-size:1em;
+	}
+	
+#leftft {
+	float:left;
+	text-align:left;
+	padding-left:30px;
+	}
+	
+#leftft p {
+	text-align:left;
+	}
+	
+#rightft {
+	float:right;
+	}
+	
+	
+body div p {
+	padding-right:30px;
+	text-align:right;
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+	}
+	
+#leftcolumn {
+	float:left;
+	width:280px;
+	height:800px;
+	padding-left:30px;
+	color:#000;
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+	}
+	
+#leftcolumn p {
+	text-align:left;
+	}
+	
+#rightcolumn {
+	float:left;
+	margin-left:30px;
+	width:280px;
+	height:800px;
+	color:#000;
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+	}
+	
+#rightcolumn p {
+	text-align:left;
+	padding:0px;
+	}
+	
+#rightcolumn h1 {
+	text-align:center;
+	}
+	
+#rightcolumn ul {
+	text-align:center;
+	list-style-type:none;
+	padding-bottom:35px;
+	padding-left:0px;
+	}
+	
+#bigger {
+	font-size:1.3em;
+	margin-bottom:21px;
+	}
+	
+.headerborder {
+	border-top:1px solid #000;
+	border-bottom:1px solid #000;
+	}
+	
+.logo {
+	display:inline;
+	float:left;
+	padding-left:30px;
+	}
+
+	
+nav ul li a {
+	text-decoration:none;
+	color:#fff;
+	}
+	
+nav ul li {
+	display:inline;
+	list-style-type:none;
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+	font-size:1.4em;
+	text-transform:uppercase;
+	padding-left:15px;
+	padding-right:15px;
+	}
+	
+nav ul {
+	text-align:center;
+	padding:0px;
+	}
+	
+nav {
+	/*position:relative;*/
+	background-color:#595A5C;
+	color:#fff;
+	padding:5px;
+	}
+	
+header {
+	height:456px;
+	width:100%;
+	}
+	
+#wrapper {
+	background-position:center;
+	background-color:#C0C0C0;
+	max-width:960px;
+	width:80%;
+	margin:auto;
+	}
+
+.title {
+	text-transform:uppercase;
+	color:#fff;
+	font-size:5em;
+	font-family:Helvetica, Verdana, Arial, sans-serif;
+	text-shadow:1px 1px 5px #2D2929;
+	position:absolute;
+	display:block;
+	max-width:350px;
+	margin:20px;
+	}
+
+.ise {
+	background-image:url(images/Chalked_Handsweb1.png);
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	}
+	
+.esi {
+	background-image:url(images/corevalues.png);
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	}
+	
+.clearfix{
+	clear:both;
+	}
+	
+.stoked {
+	height:100%;
+	max-width:960px;
+	/*display:inline;*/
+	position:relative;
+	}
+.blue {
+	color:#0073BF;
+	top:-20px;
+	position:relative;
+
+	}
+	
+h3 {
+	text-align:center;
+	}
+	
+.menu{
+    position:relative;
+	}
+	
+.menu li a{
+	color: #fff;
+	text-shadow: 0px 0px 5px #000;
+	letter-spacing: 1px;
+	transition: all 0.1s ease-in-out;
+	}
+	
+.menu:hover li a{
+	text-shadow: 0px 0px 5px #000;
+	}
+	
+.menu li a:hover{
+	color: #0073BF;
+	text-shadow: 0px 0px 10px #000;
+	padding-left: 10px;
+	}
+	
+.pics {
+	margin-top:20px;
+	transition:all 0.1s ease-in-out;
+	}
+	
+.pics:hover {
+	box-shadow:5px #000;
+	padding-left:5px;
+	}
+	
+#founder {
+	 float:left;
+	 padding-right:10px;
+	 padding-bottom:5px;
+	 }
+	 
+#mainContent {
+	float:left;
+	width:580px;
+	height:auto;
+	padding-left:30px;
+	padding-right:0px;
+	color:#000;
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+	}
+
+#mainContent iframe {
+	padding:0px;
+	} 
+	
+#mainContent p {
+	text-align:left;
+	}
+	
+#mainContent ul li a {
+	text-decoration:none;
+	color:#1352AB;
+	}
+	
+#scheduleHeader {
+	background-image:url(images/corevalues.png);
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	}
+	 
+@media only screen and (max-width: 580px) {
+
+/*.ise {
+	background-image:url(images/Chalked_Handsweb1.png);
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	}*/
+
+div.borders p {
+	font-size: 0px;
+	}
+
+.title {
+	text-transform:uppercase;
+	color:#fff;
+	font-size:0em;
+	font-family:Helvetica, Verdana, Arial, sans-serif;
+	text-shadow:1px 1px 5px #2D2929;
+	position:absolute;
+	display:block;
+	max-width:350px;
+	margin:20px;
+	}
+	
+#wrapper {
+	background-position:center;
+	background-color:#C0C0C0;
+	max-width: 340px;
+	min-width: 340px;
+	width:auto;
+	}
+	
+.logo {
+	display: block;
+	float: none;
+	padding-left: 0px;
+	margin-left: auto;
+    margin-right: auto;
+	
+	}
+	
+.borders{
+	margin-left: auto;
+    margin-right: auto;
+	}
+
+header {
+	height:0px;
+	width:0%;
+	}
+	
+nav ul {
+	text-align:center;
+	padding-left:35px;
+	padding-right:35px;
+	}
+	
+nav ul li {
+	display:block;
+	}
+	
+#leftcolumn {
+	float:left;
+	width:280px;
+	height:700px;
+	padding-left:30px;
+	color:#000;
+	font-family:Verdana, Helvetica, Arial, sans-serif;
+	}
+}

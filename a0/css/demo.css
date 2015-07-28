@@ -1,0 +1,53 @@
+@import url('../reset.css');
+/*Cheated to get the background images to layer*/
+html {
+	background-image:url(../images/giftly.png);
+	height:100%;
+}
+/*Changed the background position and height to get the 
+family picture to stay center and take the height of the 
+page*/
+body{
+    background-position: center 0;
+    -webkit-background-size: auto, cover;
+    background-size: auto, cover;
+	font-family: 'Josefin Slab', Arial, sans-serif;
+	font-size: 13px;
+	height:100%;
+}
+.container{
+	position:relative;
+}
+
+/*Takes the underline away for the hyperlinks*/
+a{
+	text-decoration: none;
+}
+
+/*Formats the content of the bmenu*/
+.content{
+	position:relative;
+    width:540px;
+    margin: 50px 0px 0px 0px;
+}
+
+/*Changed background color to be opaque while the text
+would stay bold; rgba.  Also changed the radius and padding.*/
+h1{
+	background-color:rgba(115,110,110,0.6);
+	border-radius:15px;
+	margin:0px;
+	padding:10px;
+	font-size:42px;
+	color:rgba(51,234,212,1.00);
+	text-align:left;
+	font-weight:400;
+    text-align:left;
+	
+}
+
+/*Changed the font color to stay bold in opaque background*/
+h1 span{
+	font-size:22px;
+	color:rgba(175,233,61,1.00);
+	padding-top:10px;
