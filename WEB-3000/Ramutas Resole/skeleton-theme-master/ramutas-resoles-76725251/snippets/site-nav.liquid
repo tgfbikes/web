@@ -1,0 +1,60 @@
+{% comment %}
+  A word on drop-down menus: Shopify has no concept of them.
+  Drop-down menus in Shopify themes are a hack that relies on a naming convention.
+  To create a drop-down menu, the merchant must create a link list that has the same name as the link he wants the drop-down for.
+  For example, if he wants a drop-down under a 'Shop by brand' link (say, he has such link in his Main Menu), he needs to create a linklist called 'Shop by brand', and populate it with links. Once he has done that, there'll be a drop-down under 'Shop by brand'.
+  Shopify has a visual how-to guide here: http://docs.shopify.com/manual/your-website/navigation/create-drop-down-menu.
+  The naming convention hack won't work well if a shop's navigation uses non-English characters. There's a much more verbose coding solution that handles non-English characters here: http://docs.shopify.com/manual/configuration/store-customization/currencies-and-translations/translations/can-i-have-drop-down-menus-that-use-non-english-characters.
+  A word on sub-categories: Shopify manages sub-categories using product tags: http://docs.shopify.com/manual/configuration/store-customization/page-specific/collections/subcategories
+{% endcomment %}
+
+<nav role="navigation" id="nav-scroll" class="clearfix">
+  <div class="nav-logo left">
+    <a href='/'><img src="{{ 'logo_inline.png' | asset_url }}" /></a>
+  </div>
+  <div class="main-links left">
+    <ul>
+      {% for link in linklists.main-menu.links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="search-div right">
+    <ul>
+      <li class="cart-link">
+        <a href="/cart"><img class="cart-img" src="{{ 'cart.png' | asset_url }}" /> {{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} ({{ cart.total_price | money }})</a>
+      </li>
+    </ul>
+    <!--form action="/search" method="get" class="search-form" role="search">
+      <input name="q" type="search" id="search-field" placeholder="Search store..." value="{{ search.terms | escape }}" />
+      <input type="submit" id="search-submit" value="Search" />
+    </form>
+    <ul>
+      <li class="show-on-small{% if template == 'search' %} inactive{% endif %}">
+        <a href="/search">
+          <i class="fa fa-search"></i>
+        </a>
+      </li>
+    </ul-->
+  </div>
+  <script>
+
+    $(document).ready(function() {
+      
+      function navScroll(event) {
+        var top = ($(this).scrollTop());
+        if(top > 20) {
+          $('#nav-scroll').addClass("fix-nav");
+          $('#logo').addClass("logo-top-margin");
+        } else {
+          $('#nav-scroll').removeClass("fix-nav");
+          $('#logo').removeClass("logo-top-margin");
+        }
+      };
+        
+      $(window).scroll($.throttle( 100, navScroll));
+      
+    });
+  
+  </script>
+</nav>

@@ -31,7 +31,7 @@
         <h2 id="contacth2">
         	Contact Us
         </h2>
-        <form method="post" id="cntctfrm_contact_form" action="http://crossfitoasis.com/contact-2/" enctype="multipart/form-data">
+        <form method="post" id="cntctfrm_contact_form" action="http://crossfitoasis.com/redirect.php" enctype="multipart/form-data">
             <div style="text-align: left; padding-top: 5px;">
                 <label for="cntctfrm_contact_name">Name: </label>
             </div>
@@ -57,6 +57,7 @@
                 <textarea rows="5" cols="30" placeholder="Enter Your Message Here" name="cntctfrm_contact_message" id="cntctfrm_contact_message"></textarea>
             </div>
             <div style="text-align: left; padding-top: 8px;">
+            <input type="hidden" name="sendtoemail" value="info@crossfitoasis.com">
                 <input type="hidden" value="send" name="cntctfrm_contact_action">
                 <input type="hidden" value="Version: 3.30">
                 <input type="hidden" value="en" name="cntctfrm_language">

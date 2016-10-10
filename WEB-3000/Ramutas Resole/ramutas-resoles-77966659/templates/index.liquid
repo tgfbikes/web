@@ -1,0 +1,174 @@
+<!-- /templates/index.liquid -->
+
+<div class="hero-wrapper">
+  <div class="hero__site-header">
+    <div class="grid grid--no-gutter grid--table site-header__inner" id="onScroll">
+      <div class="grid__item one-third medium-up--one-sixth">
+        <button type="button" class="site-header__link text-link site-header__toggle-nav js-drawer-open-left">
+          <span class="icon icon-hamburger" aria-hidden="true"></span>
+          <span class="icon__fallback-text">{{ 'layout.navigation.menu' | t }}</span>
+        </button>
+      </div>
+      <div class="grid__item one-third medium-up--two-thirds">
+        <div class="site-header__logo h1" itemscope="" itemtype="http://schema.org/Organization">
+          <a href="/" itemprop="url" class="site-header__logo-link text-center">
+            <img class="site-header__logo-image" id="imgOnScroll" alt="Ramutas Resoles" itemprop="logo">
+          </a>
+        </div>
+      </div>
+      <div class="grid__item one-third medium-up--one-sixth text-right">
+        <a href="/search" class="site-header__link site-header__search js-drawer-open-top">
+          <span class="icon icon-search" aria-hidden="true"></span>
+          <span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
+        </a>
+        <a href="/cart" class="site-header__link site-header__cart cart-link{% if settings.cart_type == 'drawer' %} js-drawer-open-right{% endif %}{% if cart.item_count > 0 %} cart-bubble--visible{% endif %}">
+          <span class="icon icon-cart" aria-hidden="true"></span>
+          <span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  {% unless settings.hero_logo_type == '' %}
+    <div class="hero__logo-wrapper">
+        <h1 class="hero__logo" itemscope itemtype="http://schema.org/Organization">
+          <span class="hero__logo-centered">
+            {% case settings.hero_logo_type %}
+              {% when 'header' %}
+                {% if settings.logo_use_image %}
+                  <img class="hero__logo-image" src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" itemprop="logo">
+                {% else %}
+                  <h1 class="hero__logo-text" itemprop="url">{{ shop.name }}</h1>
+                {% endif %}
+              {% when 'custom' %}
+                <img class="hero__logo-image" src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" itemprop="logo">
+              {% when 'text' %}
+                <h1 class="hero__logo-text" itemprop="url">{{ shop.name }}</h1>
+            {% endcase %}
+          </span>
+        </h1>
+    </div>
+  {% endunless %}
+  <div class="hero" id="Hero">
+    {% for i in (1..4) %}
+      {% capture slide %}hero_slide_{{ i }}_enable{% endcapture %}
+      {% capture slide_img %}hero_slide_{{ i }}.jpg{% endcapture %}
+      {% if forloop.first or settings[slide] %}
+        <div class="hero__slide">
+          <div class="hero__image" data-image="{{ slide_img | asset_url }}">
+            <img class="hero__image-src hide" src="{{ slide_img | asset_url }}">
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="hero__header">
+    <div class="action-area">
+      {% include 'action-bar' %}
+    </div>
+  </div>
+</div>
+
+<!-- START HOME PAGE CONTENT -->
+<div class="index-section index-container experience-section">
+  <div class="flex-wrapper">
+    <div class="experience-text text-card">
+      <h1>20 Years of Experience</h1>
+      <h3>You're Welcome</h3>
+      <hr>
+      <p>Since 1995 Ramuta’s Resoles had provide the highest level of service and quality for rock climbing shoe repair.  John Ramuta is a third generation cobbler.  His apprenticeship started in 1986 working in his father’s shop.  John began resoling rock climbing shoes in 1995 after discovering climbing.  He studied under one of the best Canadian cobblers and after a year of experimentation with bonding methods and cements along with rigorous tesing by local climbers, Ramuta’s Resoles was born.</p>
+    </div>
+    <div class="experience-image"></div>
+  </div>
+</div>
+<div class="process-section process-bg-color index-container">
+  <h1>The Process</h1>
+  <hr>
+  <div class="flex-wrapper process-bg-color center-content">
+    <div class="process-tell process-card">
+      <div class="process-card-image">
+        <img src="{{ 'worsecasesenario1.png' | asset_url }}" alt="Ramuta's Resole tell us about your shoes" />
+      </div>
+      <h2>Tell us about your shoes</h2>
+      <hr>
+      <p>Specify the repairs you would like for us to complete on your shoes. Not sure which repairs you need?  We can help.</p>
+      <div>
+        <a href="/pages/prices" class="btn">Learn more</a>
+      </div>
+    </div>
+    <div class="process-ship process-card">
+      <div class="process-card-image">
+        <img src="{{ 'shipping.jpg' | asset_url }}" alt="Ramuta's Resole ship us your shoes" />
+      </div>
+      <h2>Ship your shoes to us</h2>
+      <hr>
+      <p>Send us your shoes with a copy of the order form and then kick back and relax.</p>
+      <div>
+        <a href="/pages/prices" class="btn">Learn more</a>
+      </div>
+    </div>
+    <div class="process-take-care process-card">
+      <div class="process-card-image">
+        <img src="{{ 'take_care.png' | asset_url }}" alt="Ramuta's Resole we take care of the rest" />
+      </div>
+      <h2>We take care of the rest</h2>
+      <hr>
+      <p>With a whole bunch of experience and a healthy dose of love, we get your shoes repaired and returned to you.</p>
+      <div>
+        <a href="/pages/prices" class="btn">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="guarantee-section index-container">
+  <div class="flex-wrapper filler-image">
+      <div class="guarantee-text text-card">
+        <h1>The Guarantee</h1>
+        <hr>
+        <p>We take our craft very seriously which makes us confident in the quality of our repairs.  Therefore, we guarantee all of our repairs to be free from material and manufacturing defects.  If you recieve your shoes back and are not satisfied please contact us and we will be more than willing to work with you in any way we can.</p>
+      </div>
+  </div>
+</div>
+<div class="index-section index-container rubber-section">
+  <div class="flex-wrapper">
+    <div class="rubber-text text-card">
+      <h1>The Rubber</h1>
+      <hr>
+      <p>We carry rubber from 5.10 and Vibram. Both companies offer soft and firm versions of their rubber. Typically softer rubber is better for friction and firm is better for edging.</p>
+      <div class="rubber-types">
+        <h2>Here's a list of the rubber we carry</h2>
+        <hr>
+        <div class="flex-wrapper">
+          <div class="five-ten">
+            <ul>
+              <li>5.10 C4 Stealth (soft)</li>
+              <li>5.10 Stealth Onyxx (firm)</li>
+            </ul>
+          </div>
+          <div class="vibram">
+            <ul>
+              <li>Vibram XS Grip (soft)</li>
+              <li>Vibram XS Edge (firm)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rubber-image"></div>
+  </div>
+</div>
+
+<script>
+  $(window).scroll(function() {
+    var header    = $('#onScroll');
+    var headerImg = $('#imgOnScroll');
+    var scroll    = $(window).scrollTop();
+
+    if (scroll > 0) {
+      header.addClass('scroll-color');
+      headerImg.addClass('show-img-onscroll');
+    } else {
+      header.removeClass('scroll-color');
+      headerImg.removeClass('show-img-onscroll');
+    }
+  });
+</script>

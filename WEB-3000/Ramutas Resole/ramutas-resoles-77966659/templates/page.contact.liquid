@@ -1,0 +1,81 @@
+<!-- /templates/page.contact.liquid -->
+
+<div class="page-width page-container">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <hr>
+  </header>
+
+  <div class="rte rte--indented-images">
+    {{ page.content }}
+  </div>
+  
+  <div class="contact-flex-wrapper">
+  
+  <div class="contact-text">
+    <p>If you haven't found the answers you are looking for in regards to climbing shoe repair you should Google it, just kidding. We would be more than happy to answer your questions about anything; repair process, estimated return times, local crags, the average speed of unladen swallow carrying a coconut, etc.</p>
+    <p>We are conveniently located in the middle of nowhere, otherwise known as Helena, Montana. Most wouldn't think it but the climbing in the greater Helena area is superb and remote, so we sort of like it here. If you find yourself up here to do some climbing and your kicks need some professional attention, we welcome walk-ins.</p>
+    <div class="contact-info">
+      <h2>General Information</h2>
+      <hr>
+      <div class="flex-wrapper">
+        <div class="address">
+          <p>6015 Greenfield Loop<br>
+             Helena, Montana 59602<br>
+             john@ramutasresoles.com<br>
+             (406) 465-0494</p>
+        </div>
+        <div class="hours">
+          <p>Tue-Fri 9:00-5:30<br>
+             Sat 10:00- 3:00<br>
+             Sun/ Mon Closed<br>
+             First Saturday of each month - Closed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-bg-color">
+    <h2>Mail us</h2>
+    <hr>
+    <div class="contact-form form-vertical">
+      {% form 'contact' %}
+
+        {% if form.posted_successfully? %}
+          <p class="note form-success">
+            {{ 'contact.form.post_success' | t }}
+          </p>
+        {% endif %}
+
+        {{ form.errors | default_errors }}
+
+        {% assign name_attr = 'contact.form.name' | t | handle %}
+        <div class="grid">
+          <div class="grid__item medium-up--one-half">
+            <label for="ContactFormName" class="label--hidden">{{ 'contact.form.name' | t }}</label>
+            <input type="text" id="ContactFormName" name="contact[{{ name_attr }}]" placeholder="{{ 'contact.form.name' | t }}" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.name }}{% endif %}" class="input-full">
+          </div>
+
+          <div class="contact-form__email grid__item medium-up--one-half">
+            <label for="ContactFormEmail" class="label--hidden">{{ 'contact.form.email' | t }}</label>
+            <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="{{ 'contact.form.email' | t }}" autocorrect="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" class="input-full">
+          </div>
+
+          <div class="grid__item">
+            {% assign name_attr = 'contact.form.phone' | t | handle %}
+            <label for="ContactFormPhone" class="label--hidden">{{ 'contact.form.phone' | t }}</label>
+            <input type="tel" id="ContactFormPhone" name="contact[{{ name_attr }}]" placeholder="{{ 'contact.form.phone' | t }}" pattern="[0-9\-]*" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.phone }}{% endif %}" class="input-full">
+          </div>
+
+          <div class="grid__item">
+            <label for="ContactFormMessage" class="label--hidden">{{ 'contact.form.message' | t }}</label>
+            <textarea id="ContactFormMessage" name="contact[body]" placeholder="{{ 'contact.form.message' | t }}" class="input-full">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+          </div>
+        </div>
+
+        <input type="submit" class="btn" value="{{ 'contact.form.send' | t }}">
+
+      {% endform %}
+    </div>
+  </div>
+  </div>
+</div>

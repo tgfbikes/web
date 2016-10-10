@@ -1,0 +1,59 @@
+#wrapper {
+    margin: 0 auto;
+}
+
+#navlist {
+    position: relative;
+}
+
+#navlist li {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    display: block;
+}
+
+#navlist li, #navlist a {
+    height: 50px;
+    display: block;
+}
+
+#home{
+    width: 100px;
+    left: 0;
+    background: url('navBar.gif') no-repeat 0 0;
+}
+
+#about{
+    width: 100px;
+    left: 100px;
+    background: url('navBar.gif') no-repeat -100px 0;
+}
+
+#contact{
+    width: 100px;
+    left: 200px;
+    background: url('navBar.gif') no-repeat -200px 0;
+}
+
+#services{
+    width: 100px;
+    left: 300px;
+    background: url('navBar.gif') no-repeat -300px 0;
+}
+
+#home a:hover {
+    background: url("navBar.gif") 0 -50px;
+}
+
+#about a:hover {
+    background: url("navBar.gif") -100px -50px;
+}
+
+#contact a:hover {
+    background: url("navBar.gif") -200px -50px;
+}
+
+#services a:hover {
+    background: url("navBar.gif") -300px -50px;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="not selector">
+    <meta content="explanation of not selector">
+    <title>Not Selector</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <header>The :not Selector</header>
+    <main>
+        <section>
+            <h3>Because giving others what you don't want is fun...</h3>
+            <p>The :not CSS selector will apply to everything else NOT what you have specified.</p>
+            <h4>For example</h4>
+            <blockquote>
+                :not(blockquote) {<br>
+                <span class="tabbed">font-family: Avenir, sans-serif;</span><br>
+                <span class="tabbed">color: #000;</span><br>
+                }<br>
+                <p>
+                    So as you can see, everything else besides the blockquote is Avenir (blockquote is set to Helvetica)
+                    or sans-serif; based off the browser.
+                </p>
+
+            </blockquote>
+            <hr>
+            <p>
+                Now lets get fancy, and not just regular fancy, but Canadian fancy.  You can also designate a
+                selector, for our purposes an li with a class, to be singled out of the styling from the rest.
+            </p>
+            <h4>Exhibit A...eh</h4>
+            <blockquote>
+                li:not(.somethingelse) {<br>
+                <span class="tabbed">color: red;</span><br>
+                )<br>
+                <ul>
+                    <li>Give me what you don't want</li>
+                    <li class="somethingelse">I don't want this color, I'm going to dump it on all these other chumps</li>
+                    <li>I'll take some also jerk face li tag</li>
+                </ul>
+                <p>
+                   Here we are making every other li font color red except the li with the class
+                    somehtingelse.  If that doesn't scream maple leaf magic I don't know what does.
+                </p>
+            </blockquote>
+        </section>
+    </main>
+
+</body>
+</html>

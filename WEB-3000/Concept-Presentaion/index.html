@@ -1,0 +1,287 @@
+<!doctype html>
+<html xmlns:h2="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>DSU Student Portal</title>
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout clearfix">
+
+        <!-- HEADER SECTION -->
+        <header class="dsu-portal-header mdl-layout-header">
+            <div class="background mdl-layout__header-row">
+                <div class="mdl-layout-title"><span class="red">DSU</span><br>Student Portal</div>
+            </div>
+            <div class="background mdl-layout__header-row"></div>
+            <div class="background mdl-layout__header-row">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col"></div>
+                    <div class="mdl-cell mdl-cell--4-col"><i class="material-icons md-72">change_history</i></div>
+                    <div class="mdl-cell mdl-cell--4-col"></div>
+                </div>
+            </div>
+            <div class="background mdl-layout__header-row"></div>
+            <div class="background mdl-layout__header-row">
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#">Login</a>
+                    <a class="mdl-navigation__link" href="#">Student Services</a>
+                    <a class="mdl-navigation__link" href="#">Calendar</a>
+                    <a class="mdl-navigation__link" href="#">News</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- SIDE DRAWER -->
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title background-red white">Resources</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Tuition & fees</a>
+                <a class="mdl-navigation__link" href="">Finals schedule</a>
+                <a class="mdl-navigation__link" href="">Class schedules</a>
+                <a class="mdl-navigation__link" href="">Employment</a>
+                <a class="mdl-navigation__link" href="">Apply for graduation</a>
+                <a class="mdl-navigation__link" href="">IT help desk</a>
+            </nav>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="center-content">
+            <main class="background-grey center-align mdl-layout__content">
+                <div class="mdl-grid mdl-grid--no-spacing">
+                    <!-- TABS -->
+                    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                        <div class="mdl-tabs__tab-bar">
+                            <a href="#canvas-tab" class="mdl-tabs__tab is-active">Canvas</a>
+                            <a href="#banner-tab" class="mdl-tabs__tab">Banner</a>
+                            <a href="#dmail-tab" class="mdl-tabs__tab">Dmail</a>
+                        </div>
+
+                        <!-- CANVAS CARD -->
+                        <div class="mdl-tabs__panel is-active" id="canvas-tab">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                                <div class="mdl-grid mdl-grid--no-spacing">
+                                    <div class="mdl-cell mdl-cell--12-col">
+                                        <h1 class="card-heading mdl-card__title-text background-red white">Canvas</h1>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Stay on top of homework and your academic calendar with Dixie's Learning Management System,
+                                        Canvas.
+                                    </div>
+                                    <div class="mdl-card__actions mdl-cell mdl-cell--12-col mdl-card--border">
+                                        <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                                <input class="mdl-textfield__input" type="text" id="dixieID" />
+                                                <label class="mdl-textfield__label" for="dixieID">Dixie ID</label>
+                                            </div>
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                                <input class="mdl-textfield__input" type="text" id="passwd" />
+                                                <label class="mdl-textfield__label" for="passwd">Password</label>
+                                            </div>
+                                            <a class="mdl-button mdl-js-button mdl-js-ripple-effect red">
+                                                Login to Canvas
+                                            </a>
+                                        </form>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- BANNER CARD -->
+                        <div class="mdl-tabs__panel" id="banner-tab">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                                <div class="mdl-grid mdl-grid--no-spacing">
+                                    <div class="mdl-cell mdl-cell--12-col">
+                                        <h1 class="card-heading mdl-card__title-text background-red white">Banner</h1>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Apply, register, view class schedule and more. Login to manage your account.
+                                    </div>
+                                    <div class="mdl-card__actions mdl-cell mdl-cell--12-col mdl-card--border">
+                                        <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                                <input class="mdl-textfield__input" type="text" id="dixieID" />
+                                                <label class="mdl-textfield__label" for="dixieID">Dixie ID</label>
+                                            </div>
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                                <input class="mdl-textfield__input" type="text" id="passwd" />
+                                                <label class="mdl-textfield__label" for="passwd">Password</label>
+                                            </div>
+                                            <a class="mdl-button mdl-js-button mdl-js-ripple-effect red">
+                                                Login to Banner
+                                            </a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DMAIL CARD -->
+                        <div class="mdl-tabs__panel" id="dmail-tab">
+                            <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                                <div class="mdl-grid mdl-grid--no-spacing">
+                                    <div class="mdl-cell mdl-cell--12-col">
+                                        <h1 class="card-heading mdl-card__title-text background-red white">Dmail</h1>
+                                    </div>
+                                    <div class="mdl-card__supporting-text">
+                                        Your own Dixie State email that you most likely will never use.
+                                    </div>
+                                    <div class="mdl-card__actions mdl-cell mdl-cell--12-col mdl-card--border">
+                                        <form action="#">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                                <input class="mdl-textfield__input" type="text" id="dixieID" />
+                                                <label class="mdl-textfield__label" for="dixieID">Dixie ID</label>
+                                            </div>
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                                <input class="mdl-textfield__input" type="text" id="passwd" />
+                                                <label class="mdl-textfield__label" for="passwd">Password</label>
+                                            </div>
+                                            <a class="mdl-button mdl-js-button mdl-js-ripple-effect red">
+                                                Login to Dmail
+                                            </a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!----- END OF TABS ----->
+
+                <!----- GRADUATE CARD ----->
+                <section class="mdl-grid mdl-grid--no-spacing pos-rel margin-t">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                        <div class="mdl-grid mdl-grid--no-spacing">
+                            <header class="mdl-cell mdl-cell--2-col icon-center background-blue mdl-color-text--white">
+                                <i class="material-icons md-72">school</i>
+                            </header>
+                            <div class="mdl-card mdl-cell mdl-cell--10-col">
+                                <div class="mdl-card__supporting-text">
+                                    <h4>Graduate on time</h4>
+                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button href="#" class="mdl-button mdl-button--raised background-orange white button-position pos-abs">Learn<br>more</button>
+                </section>
+
+                <!----- STUDENT CARD ----->
+                <section class="mdl-grid margin-t">
+                    <div class="stephen-card mdl-card mdl-cell mdl-cell--6-col mdl-shadow--2dp">
+                        <div class="mdl-card__supporting-text">
+                            <h5>Stephen King</h5>
+                        </div>
+                    </div>
+                    <div class="mdl-card mdl-card__supporting-text mdl-cell mdl-cell--6-col background-white-green mdl-shadow--2dp">
+                        <h2 class="center-text">Student of the month</h2>
+                        <p>
+                            One of our very own, going the distance to stop the spread of Communism and bring back the 70's outlook
+                            on hairy men.
+                        </p>
+                        <a href="#" class="mdl-button mdl-button--raised background-light-grey red">Read full article</a>
+                    </div>
+                </section>
+
+                <!----- NEWS & EVENTS CARD ----->
+                <section class="mdl-grid margin-t">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                        <div class="mdl-grid mdl-grid--no-spacing">
+                            <h4 class="card-heading mdl-cell mdl-cell--12-col background-brown white">News & Events</h4>
+                            <div class="support-text-margin mdl-grid mdl-card__supporting-text mdl-cell mdl-cell--12-col">
+                                <div class="card-cell-padding mdl-cell mdl-cell--2-col">
+                                    <i class="material-icons md-72 background-orange white">stop</i>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col">
+                                    <h5>DSU professor thinks car is Chitty-Chitty Bang-Bang</h5>
+                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                                </div>
+                                <div class="card-cell-padding mdl-cell mdl-cell--2-col">
+                                    <i class="material-icons md-72 background-light-green white">stop</i>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col">
+                                    <h5>Dixie One: longer user IDs are fun!</h5>
+                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                                </div>
+                                <div class="card-cell-padding mdl-cell mdl-cell--2-col">
+                                    <i class="material-icons md-72 background-indigo white">stop</i>
+                                </div>
+                                <div class="mdl-cell mdl-cell--10-col">
+                                    <h5>DSU blond population decreasing</h5>
+                                    Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                                </div>
+                                <div class="mdl-card__actions">
+                                    <a href="#" class="mdl-button mdl-button--raised button-margin-left red">See all news articles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            </main>
+        </div>
+
+        <!----- SPACER ----->
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col"></div>
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="mdl-mega-footer">
+            <div class="center-content mdl-mega-footer__middle-section">
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">General Information</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">Accreditation</a></li>
+                        <li><a href="#">About DSU</a></li>
+                        <li><a href="#">IT Helpdesk</a></li>
+                        <li><a href="#">Parking</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Schools</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">Fine Arts</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Business & Communication</a></li>
+                        <li><a href="#">Science & Technology</a></li>
+                        <li><a href="#">Health Sciences</a></li>
+                        <li><a href="#">Humanities</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">Resources</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">University Catalog</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Bookstore</a></li>
+                        <li><a href="#">Tuition & Fees</a></li>
+                        <li><a href="#">Contracts</a></li>
+                    </ul>
+                </div>
+
+                <div class="mdl-mega-footer__drop-down-section">
+                    <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                    <h1 class="mdl-mega-footer__heading">FAQ</h1>
+                    <ul class="mdl-mega-footer__link-list">
+                        <li><a href="#">Questions</a></li>
+                        <li><a href="#">Answers</a></li>
+                        <li><a href="#">Contact DSU</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+</body>
+</html>

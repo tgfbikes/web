@@ -1,0 +1,24 @@
+
+/*!theme settings */
+$site-max-width:          1240px;
+$breakpoint-small-screen: 480px;
+$gutter:                  20px;
+$background-color:        #ffffff;
+$text-color:              #2D3436;
+$link-color:              {{ settings.link_color }};
+$base-font-family:        'Open sans', sans-serif;
+$base-font-size:          16px;
+$heading-font-family:     'Arvo', serif;
+$heading-font-weight:     300;
+
+/* ================
+   4. Layout
+   ================ */
+
+/* Control the web page maximum width. */
+.container {
+  width: 85%;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  padding: $gutter;
+}

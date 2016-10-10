@@ -1,0 +1,27 @@
+@import "color.css";
+
+* {
+    font-family: sans-serif;
+}
+p {
+    font-size: 5.0vmin;
+
+}
+
+header {
+    font-family: Impact, sans-serif;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
+figure {
+    float: left;
+    margin-top:35px;
+}

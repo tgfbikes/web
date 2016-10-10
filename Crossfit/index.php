@@ -9,7 +9,7 @@
             </span>
         </div>
     </header>
-    
+
 <?php include 'nav.php'; ?>
     <div id="mainContent">
     <!--div id="leftcolumn"-->
@@ -23,11 +23,22 @@
         	Losing weight, getting stronger, being able to keep up with the grandkids, fitting into those jeans- do any of these sound familiar? We are a community of people achieving goals just like yours. We know that reaching goals is possible with a supportive community around you.
         </p>
 
+			<h1 class="headerborder">
+              Current Memeber Specials
+			</h1>
+              <h3>Ask us to upgrade your plan today!</h3>
+			<ul>
+              <li>Add Unlimited Yoga for only $10/month</li>
+              <li>Add one Personal Training Session for only $20/month</li>
+              <li>Add one bimonthly Protein or Preworkout Suppelement for only $20/month</li>
+              <li>25% off one month of memebership for each friend you refer who joins</li>
+			</ul>
+
     <!--/div-->
     <!--div id="rightcolumn"-->
 
         <h1 class="headerborder">
-           Workout of the Day 
+           Workout of the Day
         </h1>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
@@ -46,7 +57,7 @@
             </div>
         </div>
         <!--h3>
-           Mondays 8pm 
+           Mondays 8pm
         </h3>
         <ul id="bigger">
             <li>Only $10 drop in rate introductory special through January</li>
@@ -57,11 +68,11 @@
         </ul-->
 
         <h3 class="headerborder">
-            First CrossFit Class is Free!   
+            First CrossFit Class is Free!
         </h3>
         <p>
-            Your first CrossFit class is on us.  We want you to know exactly what we offer and see first hand how we operate.  Our gift to you for giving us a chance.  
-        </p> 
+            Your first CrossFit class is on us.  We want you to know exactly what we offer and see first hand how we operate.  Our gift to you for giving us a chance.
+        </p>
         <!--h3 class="headerborder">
         	CrossFit Oasis Founder
         </h3>
@@ -69,7 +80,7 @@
         <p id="paragraph">
          "I decided to couple my experience leading physical fitness in the military for about the last decade with my assignment teaching soldiers for the last three years and become a CrossFit trainer. I completed my CrossFit Level 1 Training at the Reebok headquarters in Canton, MA. Since then, I have completed the CrossFit Weightlifting Trainer Course. I can’t wait to make a difference in your life by helping bring your physical fitness level to where you are able to function better in any aspect of your life."
         </p-->
-        
+
     </div>
 <?php include 'aside.php'; ?>
 <?php include 'footer.php'; ?>

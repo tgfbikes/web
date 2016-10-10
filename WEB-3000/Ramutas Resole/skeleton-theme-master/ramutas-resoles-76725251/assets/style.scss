@@ -1,0 +1,540 @@
+
+/* ==========================================================================
+   Most theme settings should be stored in Sassy CSS variables here, for reuse.
+   ========================================================================== */
+/*!theme settings */
+$site-max-width:          1240px;
+$breakpoint-small-screen: 480px;
+$gutter:                  20px;
+$background-color:        #ffffff;
+$text-color:              #2D3436;
+$link-color:              #b5792b;
+$base-font-family:        'Open sans', sans-serif;
+$base-font-size:          16px;
+$heading-font-family:     'Arvo', serif;
+$heading-font-weight:     300;
+
+/* Table of content */
+/* 1.  Base styles
+   2.  Forms
+   3.  Tables
+   4.  Layout
+   5.  Header
+   6.  Navigation
+   7.  Tags
+   8.  Social and payment methods
+   9.  Blog
+   10. Product and collection pages
+   11. Search form and search results
+   12. Footer
+*/
+
+/* =====================
+   1. Base styles
+   ===================== */
+
+html, body {
+  background-color: $background-color;
+  font-size: $base-font-size;
+  line-height: 1.6;
+  font-family: $base-font-family;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+ 
+.paragraph-margins { margin: 0 0 .75 * $gutter; }
+.grid-margins      { margin: 0 0 $gutter;       }
+.section-margins   { margin: 0 0 2 * $gutter;   }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  text-rendering: optimizeLegibility; /* to enable ligatures and kerning */
+  @extend .paragraph-margins;
+}
+
+/* Responsive images and videos. */
+img, iframe { max-width: 100%; }
+
+.quiet { color: lighten( $text-color, 10% ); } 
+.hint { color: lighten( $text-color, 15% ); }
+i, em { font-style: italic; }
+b, strong { font-weight: 600; }
+.small-print { @extend .zeta; }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: darken( $link-color, 10% );
+  }
+  header &, footer & {
+    white-space: nowrap;
+    color: $text-color;
+  }
+  header &:hover, footer &:hover {
+    color: darken( $text-color, 10% );
+  }
+}
+
+section, #customer { @extend .section-margins; }
+p, form > div { @extend .paragraph-margins; }
+
+/* No list style for lists except in RTE content. */
+ul, ol {
+  list-style-type: none;
+  @extend .section-margins;
+  padding: 0;
+}
+.rte ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  @extend .paragraph-margins;
+}
+.rte ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  @extend .paragraph-margins;
+}
+
+/* =================
+   2. Forms
+   ================= */
+
+.search-div {
+  margin-right: 20px;
+  padding: 0;
+}
+
+/* ================
+   3. Tables
+   ================ */
+
+table { 
+  width: 100%;
+  @extend .section-margins; 
+  th, td {
+    padding: 1em;
+  }
+  tr {
+    border-bottom: darken( $background-color, 10%) 1px solid;      
+  }
+  th {
+    text-align: left;
+  } 
+}
+
+/* ================
+   4. Layout
+   ================ */
+
+/* Control the web page maximum width. */
+.container {
+  width: 100%;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  padding: $gutter;
+}
+
+/* Safeguards for floats. */
+header, #main, footer {
+  @extend .clear;
+  @extend .clearfix;
+}
+
+/* Add some space below main section. */
+header, #main {
+  @extend .section-margins;
+}
+
+/* Using border-box makes it easier to work with grids: 
+   See http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* The Grid. */
+.row {
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  margin-bottom: $gutter;
+  clear: both;
+} 
+.column {
+  float: left;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  padding-bottom: $gutter;
+}
+.column.full { width: 100%; }
+.column.three-quarters { width: 75%; }
+.column.two-thirds { width: 66.6%; }
+.column.half { width: 50%; }
+.column.third { width: 33.3%; }
+.column.fourth { width: 25%; }
+.column.fifth { width: 20%; }
+.column.sixth { width: 16.6%; }
+.column.flow-opposite { float: right; } 
+.grid { 
+  @extend .row; 
+}
+.grid > li {
+  @extend .column;
+}
+.two-per-row {
+  @extend .column.half;
+}
+.three-per-row {
+  @extend .column.third;
+}
+.four-per-row {
+  @extend .column.fourth;
+}
+.five-per-row {
+  @extend .column.fifth;
+}
+.six-per-row {
+  @extend .column.sixth;
+}
+.product {
+  @extend .row;
+}
+.product-photos, .product-details {
+  @extend .column;
+  @extend .column.half;
+}
+
+@media (max-width: $breakpoint-small-screen) {
+  .column {
+    float: none;
+    width: 100% !important;
+  }
+}
+
+/* Clearfix applied to .row because row content is floated. */
+.row { @extend .clearfix; }
+
+/* Show and hide depending on screen size. */
+@media (max-width: $breakpoint-small-screen) {
+.show-on-large, .show-on-medium, .hide-on-small { display: none; }
+}
+@media (min-width: $breakpoint-small-screen) {
+.hide-on-large, .show-on-medium, .show-on-small { display: none; }
+}
+
+/* IE8 does not support media queries */
+.lt-ie9 .show-on-medium, .lt-ie9 .show-on-small { display: none; }
+
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */ 
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* Utility classes: Hidden, float left, float right, etc. */
+.hidden { display: none; }
+.left { float: left; padding-right: $gutter; }
+.right { float: right; padding-left: $gutter; }
+.centered { text-align: center; }
+.left-aligned {
+  text-align: left;
+  @media (max-width: $breakpoint-small-screen) {
+    text-align: center;
+    margin: $gutter 0;
+  }
+}
+.right-aligned { 
+  text-align: right;
+  @media (max-width: $breakpoint-small-screen) {
+    text-align: center;
+    margin: $gutter 0;
+  }
+}
+.clear { clear: both; }
+.clear-after { *zoom: 1; }
+.clear-after:after { content: ''; display: table; clear: both; }
+
+/* ==================
+   5. Header
+   ================== */
+
+#site-title {
+  display: block;
+  @extend .section-margins;
+  @extend .giga;
+  color: $text-color;
+  text-decoration: none;
+}
+
+#logo {
+  display: block;
+  margin: $gutter/2 auto;
+  img {
+    max-height: 180px;
+  }
+}
+
+/* ==================
+   6. Navigation
+   =================== */
+
+/* Main navigation with drop-down menu support */
+
+@media (max-width: $breakpoint-small-screen) {
+  nav.left {
+    float: none;
+    display: block;
+    padding-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+nav {
+  background-color: transparent;
+}
+
+nav ul {
+  margin: 0;
+  li {
+    display: inline-block;
+    position: relative;
+    padding: 0 $gutter/2;
+    margin: 0;
+    &.first {
+      padding-left: 0;
+    }
+    &.last {
+      padding-right: 0;
+    }
+  }
+  ul {
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: -0.5 * $gutter;
+    background-color: lighten( $background-color, 15% );
+    border: 1px solid darken( $background-color, 15% );
+    -webkit-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow:    0px 1px 1px 0px rgba(50, 50, 50, 0.2);
+    box-shadow:         0px 1px 1px 0px rgba(50, 50, 50, 0.2);
+    text-align: left;
+    z-index: 2;
+    li {
+      display: block;
+      padding: $gutter/3 $gutter;
+      &:first-child {
+        padding-top: $gutter;
+      }
+      &:last-child {
+        padding-bottom: $gutter;
+      }
+    }
+  }
+}
+
+/* Styling active links. */
+nav li.active > a { color: $link-color; }
+
+/* =====================
+   7. Tags
+   ===================== */
+
+.tag {
+  @extend .button;
+  margin: 0 $gutter/3 $gutter/3 0;
+  padding: .2em .5em;
+  a {
+    text-decoration: none;
+    color: $text-color;
+  }
+  &.active {
+    background-color: $link-color;
+    border-color: $link-color;  
+    a {
+      color: $background-color;
+    }
+  }
+}
+
+.subcategories, .blog-tags {
+  font-size: 0;
+}
+
+.subcategories > li, .blog-tags > li {
+  @extend .tag;
+  font-size: 0.85 * $base-font-size;
+}
+
+
+/* ==============
+   8. Payment
+   ============== */
+
+/* IE8 does not support SVG. */
+.lt-ie9 .payment-types { display:none; }
+
+/* ===========
+   9. Blog
+   =========== */
+
+/* Separating articles with a border on the blog landing page.*/
+.template-blog .article {
+  border-bottom: darken( $background-color, 5%) 0.07rem solid;
+  padding: $gutter 0;
+  &.first {
+    padding-top: 0;
+  }
+  &.last {
+    border-bottom: none;
+  }
+}
+
+/* All blog images should stretch to the full width on small screens. */
+@media (max-width: $breakpoint-small-screen) {
+  .template-article .article img {
+    display: block;
+    width: 100% !important;
+    float: none !important;
+    margin-top: $gutter/2 !important;
+    margin-bottom: $gutter/2 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    clear: both;
+    @extend .clear-after;
+  }
+}
+
+.date, .comment-date { @extend .zeta; }
+
+.meta > span + span { padding-left: $gutter/2; }
+
+/* Square element that contains the blog image, which is
+set as a centered background image. */
+.square-holder {
+  display: block; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 100%; 
+  height: 0; 
+  padding-bottom: 100%;
+}
+
+/* Fading out content so that the height of the article excerpt
+always matches the height of the blog image on the left. */
+.fadeout-overflow-bottom {
+  position: relative;
+  height: 0; 
+  padding-bottom: 33.33%; 
+  overflow: hidden;
+}
+.fadeout-overflow-bottom:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;  
+  width: 100%;
+  height: 3 * $gutter;
+  background: linear-gradient(to top, rgba($background-color, 1) 0, rgba($background-color, 0) 100%);
+  pointer-events: none;
+}
+
+/* On small screens, we don't truncate content, and don't fade
+it out since the blog image is full-width, and the excerpt
+is below it. */
+@media (max-width: $breakpoint-small-screen) {
+  .fadeout-overflow-bottom {
+    height: auto;
+    padding-bottom: 0;
+  }
+  .fadeout-overflow-bottom:after {
+    background: transparent;
+  }
+}
+
+.lt-ie9 .fadeout-overflow-bottom { height: auto; padding-bottom: 0; }
+
+#comments { margin: 2 * $gutter 0; }
+
+/* ==========================================================================
+  10. Product and collection pages.
+  ========================================================================== */
+
+.product-details > div,
+.product-details > p {
+  @extend .section-margins;
+}
+
+.product-photo-container {
+  @extend .grid-margins;
+}
+
+/* Quickly hiding default variant drop-down when JavaScript is enabled */
+/* See this: http://www.learningjquery.com/2008/10/1-way-to-avoid-the-flash-of-unstyled-content/ */
+.js #product-select { display: none; }
+
+/* Product option wrapper. */
+.selector-wrapper {
+  @extend .paragraph-margins;
+}
+
+.sort-by {
+  margin-top: .25rem;
+}
+
+@media (max-width: $breakpoint-small-screen) {
+  .sort-by {
+    float: none;
+    margin-bottom: $gutter;
+  }
+}
+
+.prod-caption {
+  margin: $gutter/6 0;
+}
+
+.product-photo-thumb:nth-child(2n+1) {
+  clear: both;
+}
+
+@media (max-width: $breakpoint-small-screen) {
+  .two-per-row.product-photo-thumb {
+    width: 50% !important;
+    float: left !important;
+  }  
+}
+
+/* ======================================
+   11. Search form and search results
+   ====================================== */
+
+/* Override to globally-hosted search.css on the /search page */
+#searchresults {
+  @extend .paragraph-margins;
+}
+/* Styling all search forms. You can reuse this for newsletter signup form. */
+.search-form {
+  display: inline-block;
+}
+/* Hiding search form in header on small screens */
+@media (max-width: $breakpoint-small-screen) {
+  header .search-form {
+    display: none;
+  }
+}
+
+/* =====================
+   12. Footer
+   ===================== */
+
+footer {
+  @extend .centered;
+  & > * {
+    @extend .paragraph-margins;
+  }
+  a + a { padding-left: 0.666 * $gutter; }
+}

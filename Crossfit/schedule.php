@@ -9,11 +9,11 @@
             </span>
         </div>
     </header>
-    
+
 <?php include 'nav.php'; ?>
 
 	<div id="mainContent">
-        <h1 class="headerborder">    	
+        <h1 class="headerborder">
             Schedule
         </h1>
         <h2>
@@ -23,7 +23,7 @@
             Your first class is free!  So come see what we are all about.
             You can let us know you're coming by contacting us at info@crossfitoasis.com,
             but you don't have to; just come a few minutes prior to class time.
-            After your first class, you will decide which plan is right for you and 
+            After your first class, you will decide which plan is right for you and
             schedule your two personal training sessions called "Foundations."  These
             sessions are normally $40 each.  The most popular option is our Start-Up
             Package which includes a month of CrossFit on the Unlimited Plan and Foundations
@@ -42,10 +42,19 @@
         	<li>5:50 AM</li>
             <li>7:00 AM</li>
             <li>9:10 AM</li>
-            <li>4:30 PM</li>
-            <li>5:30 PM</li>
-            <li>8:30 PM Tuesday &amp; Thursday</li>
+            <li>5:00 PM</li>
+            <li>6:00 PM - Workout with a coach - this is an open gym class where a coach will lead a warm-up, explain the workout, and then workout and cool down with you. No first-timers</li>
+            <li>7:00 PM Mondays and Wednesdays</li>
+        </ul>
+        <h2>Youth Fitness</h2>
+        <ul>
+          <li>4:00 - 4:45 PM Tuesdays and Thursdays</li>
+        </ul>
+        <h2>Yoga</h2>
+        <ul>
+          <li>8:00 PM Wednesdays</li>
+          <li>8:00 AM Saturdays</li>
         </ul>
     </div>
-<?php include 'aside.php'; ?> 
+<?php include 'aside.php'; ?>
 <?php include 'footer.php'; ?>
